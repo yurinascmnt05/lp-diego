@@ -797,6 +797,51 @@ nav a:not(.btn-outline):hover {
         color: rgba(255,255,255,0.8) !important;
         border-bottom: none !important;
     }
+
+    /* Mobile Language Selector Horizontal */
+    .lang-options {
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 15px 0 0 0;
+        margin-top: 0;
+    }
+    
+    .lang-options.show {
+        display: flex;
+    }
+    
+    .lang-options li {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 0.9rem;
+        flex: 1 1 calc(33% - 10px);
+        justify-content: center;
+    }
+    
+    .lang-options li:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--color-primary);
+    }
+    
+    .lang-selected {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        justify-content: space-between;
+    }
+
+    .lang-selected:hover {
+        border-color: var(--color-primary);
+    }
     
     .footer-grid {
         grid-template-columns: 1fr;
