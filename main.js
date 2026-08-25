@@ -143,4 +143,52 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('input_phone').placeholder = dict['form_phone'] || "Seu Telefone";
         document.getElementById('input_msg').placeholder = dict['form_msg'] || "Mensagem";
     }
+
+    // 5. About Image Carousel Logic
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    if(slides.length > 0) {
+        showSlides(slideIndex);
+        let slideInterval = setInterval(nextSlide, 4000);
+        
+        document.querySelector('.carousel-prev')?.addEventListener('click', () => {
+            clearInterval(slideInterval);
+            slideIndex--;
+            showSlides(slideIndex);
+            slideInterval = setInterval(nextSlide, 4000);
+        });
+        
+        document.querySelector('.carousel-next')?.addEventListener('click', () => {
+            clearInterval(slideInterval);
+            nextSlide();
+            slideInterval = setInterval(nextSlide, 4000);
+        });
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                slideIndex = index;
+                showSlides(slideIndex);
+                slideInterval = setInterval(nextSlide, 4000);
+            });
+        });
+        
+        function nextSlide() {
+            slideIndex++;
+            showSlides(slideIndex);
+        }
+        
+        function showSlides(n) {
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[slideIndex].classList.add('active');
+            if(dots[slideIndex]) dots[slideIndex].classList.add('active');
+        }
+    }
 });

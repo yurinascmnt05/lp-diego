@@ -336,7 +336,7 @@ nav a:not(.btn-outline):hover {
     min-height: 600px;
     display: flex;
     align-items: center;
-    background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000');
+    background-image: url('./4.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -450,12 +450,88 @@ nav a:not(.btn-outline):hover {
     font-size: 1.25rem;
 }
 
-.about-image img {
+/* ==========================================================================
+   Carousel Styles
+   ========================================================================== */
+.carousel-container {
+    position: relative;
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    position: relative;
+    overflow: hidden;
     z-index: 1;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    animation: fade 0.8s ease-in-out;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+}
+
+@keyframes fade {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+.carousel-prev, .carousel-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: var(--transition-fast);
+    z-index: 10;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: var(--color-primary);
+}
+
+.carousel-prev { left: 15px; }
+.carousel-next { right: 15px; }
+
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 10;
+}
+
+.carousel-dots .dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: var(--transition-fast);
+}
+
+.carousel-dots .dot.active, .carousel-dots .dot:hover {
+    background-color: var(--color-primary);
+    transform: scale(1.2);
 }
 
 /* ==========================================================================
@@ -518,7 +594,7 @@ nav a:not(.btn-outline):hover {
    ========================================================================== */
 .cta-section {
     position: relative;
-    background-image: url('https://images.unsplash.com/photo-1542621334-a254cf47733d?auto=format&fit=crop&q=80&w=2000');
+    background-image: url('./5.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
