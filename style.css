@@ -167,12 +167,6 @@ header {
     line-height: 1;
 }
 
-.header-logo {
-    height: 60px;
-    width: auto;
-    object-fit: contain;
-}
-
 .logo-franca {
     font-family: var(--font-heading);
     font-weight: 900;
@@ -811,10 +805,6 @@ nav a:not(.btn-outline):hover {
     }
 
     /* Mobile Header Layout Adjustments */
-    .header-logo {
-        height: 45px;
-    }
-    
     .header-left {
         gap: 8px;
     }
