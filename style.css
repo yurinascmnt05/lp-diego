@@ -1024,7 +1024,12 @@ nav a:not(.btn-outline):hover {
         margin-bottom: 10px;
     }
     
-    .has-dropdown.expanded .submenu {
+    .has-dropdown:hover .submenu {
+        display: none;
+    }
+    
+    .has-dropdown.expanded .submenu,
+    .has-dropdown.expanded:hover .submenu {
         display: flex;
     }
     
