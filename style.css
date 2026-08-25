@@ -251,8 +251,10 @@ nav a:not(.btn-outline):hover {
     flex-direction: column;
 }
 
-.has-dropdown:hover .submenu {
-    display: flex;
+@media (hover: hover) and (pointer: fine) {
+    .has-dropdown:hover .submenu {
+        display: flex;
+    }
 }
 
 .submenu a {
@@ -1024,12 +1026,7 @@ nav a:not(.btn-outline):hover {
         margin-bottom: 10px;
     }
     
-    .has-dropdown:hover .submenu {
-        display: none;
-    }
-    
-    .has-dropdown.expanded .submenu,
-    .has-dropdown.expanded:hover .submenu {
+    .has-dropdown.expanded .submenu {
         display: flex;
     }
     
