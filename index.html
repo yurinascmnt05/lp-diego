@@ -27,10 +27,27 @@
     <!-- Header / Nav -->
     <header id="header">
         <div class="container header-container">
-            <div class="logo">
-                <a href="#">
-                    <img src="./logo.png" alt="França Silva - Soluções e Tecnologia em Pavimentos" style="height: 60px; width: auto; object-fit: contain;">
-                </a>
+            <div class="header-left">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./logo.png" alt="França Silva - Soluções e Tecnologia em Pavimentos" class="header-logo">
+                    </a>
+                </div>
+                
+                <!-- Language Selector -->
+                <div class="custom-lang-selector" id="custom-lang-selector">
+                    <div class="lang-selected" id="lang-selected">
+                        <img src="https://flagcdn.com/br.svg" alt="Brasil" class="flag-icon"> <span class="lang-text">PT-BR</span>
+                        <i class="fas fa-chevron-down ms-1"></i>
+                    </div>
+                    <ul class="lang-options" id="lang-options">
+                        <li data-lang="pt-br"><img src="https://flagcdn.com/br.svg" alt="Brasil" class="flag-icon"> PT-BR</li>
+                        <li data-lang="pt-pt"><img src="https://flagcdn.com/pt.svg" alt="Portugal" class="flag-icon"> PT-PT</li>
+                        <li data-lang="en"><img src="https://flagcdn.com/us.svg" alt="USA" class="flag-icon"> EN</li>
+                        <li data-lang="es"><img src="https://flagcdn.com/es.svg" alt="España" class="flag-icon"> ES</li>
+                        <li data-lang="fr"><img src="https://flagcdn.com/fr.svg" alt="France" class="flag-icon"> FR</li>
+                    </ul>
+                </div>
             </div>
 
             <button class="mobile-menu-btn" id="mobile-menu-btn">
@@ -55,27 +72,6 @@
                     </li>
                     <li><a href="#portfolio" data-i18n="nav_portfolio">Obras</a></li>
                     <li><a href="#contact" class="btn-outline" data-i18n="nav_contact">Fale Conosco</a></li>
-                    <!-- Language Selector (Custom with Flags) -->
-                    <li class="lang-selector">
-                        <div class="custom-lang-selector" id="custom-lang-selector">
-                            <div class="lang-selected" id="lang-selected">
-                                <img src="https://flagcdn.com/br.svg" alt="Brasil" class="flag-icon"> <span>PT-BR</span>
-                                <i class="fas fa-chevron-down ms-1"></i>
-                            </div>
-                            <ul class="lang-options" id="lang-options">
-                                <li data-lang="pt-br"><img src="https://flagcdn.com/br.svg" alt="Brasil"
-                                        class="flag-icon"> PT-BR</li>
-                                <li data-lang="pt-pt"><img src="https://flagcdn.com/pt.svg" alt="Portugal"
-                                        class="flag-icon"> PT-PT</li>
-                                <li data-lang="en"><img src="https://flagcdn.com/us.svg" alt="USA" class="flag-icon"> EN
-                                </li>
-                                <li data-lang="es"><img src="https://flagcdn.com/es.svg" alt="España" class="flag-icon">
-                                    ES</li>
-                                <li data-lang="fr"><img src="https://flagcdn.com/fr.svg" alt="France" class="flag-icon">
-                                    FR</li>
-                            </ul>
-                        </div>
-                    </li>
                 </ul>
             </nav>
         </div>
