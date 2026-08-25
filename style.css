@@ -359,10 +359,9 @@ nav a:not(.btn-outline):hover {
     min-height: 600px;
     display: flex;
     align-items: center;
-    background-image: url('./4.webp');
+    background-image: url('./7.webp');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     color: var(--color-white);
 }
 
