@@ -4,9 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="França Silva - Soluções Definitivas em Pisos Industriais de Alto Desempenho. Tecnologia, durabilidade e execução rápida para a sua indústria.">
+    <!-- Primary Meta Tags (Google e Buscadores) -->
     <title>França Silva | Soluções em Pavimentos</title>
+    <meta name="title" content="França Silva | Soluções em Pavimentos">
+    <meta name="description" content="França Silva - Soluções Definitivas em Pisos Industriais de Alto Desempenho. Tecnologia, durabilidade e execução rápida para a sua indústria.">
+
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.francasilva.com/">
+    <meta property="og:title" content="França Silva | Soluções em Pavimentos">
+    <meta property="og:description" content="Tecnologia, durabilidade e execução rápida para a sua indústria. Especialistas em pisos industriais.">
+    <meta property="og:image" content="https://www.francasilva.com/1.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.francasilva.com/">
+    <meta property="twitter:title" content="França Silva | Soluções em Pavimentos">
+    <meta property="twitter:description" content="Tecnologia, durabilidade e execução rápida para a sua indústria. Especialistas em pisos industriais.">
+    <meta property="twitter:image" content="https://www.francasilva.com/1.webp">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +35,10 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png">
 </head>
 
 <body>
@@ -30,7 +49,7 @@
             <div class="header-left">
                 <div class="logo">
                     <a href="#">
-                        <img src="./logo.png" alt="França Silva - Soluções e Tecnologia em Pavimentos" style="height: 60px; width: auto; object-fit: contain;">
+                        <img src="./logo.webp" alt="França Silva - Soluções e Tecnologia em Pavimentos" style="height: 60px; width: auto; object-fit: contain;">
                     </a>
                 </div>
                 
@@ -68,6 +87,7 @@
                             <li><a href="#services" data-i18n="srv_2_title">Revestimentos de Resina / Epóxi</a></li>
                             <li><a href="#services" data-i18n="srv_3_title">Recuperação e Lapidação</a></li>
                             <li><a href="#services" data-i18n="srv_4_title">Tratamento de Juntas</a></li>
+                            <li><a href="#workforce" data-i18n="srv_5_title">Mão de Obra Especializada</a></li>
                         </ul>
                     </li>
                     <li><a href="#portfolio" data-i18n="nav_portfolio">Obras</a></li>
@@ -92,6 +112,13 @@
                         Grátis</span> <i class="fas fa-arrow-right"></i></a>
                 <a href="#services" class="btn-secondary" data-i18n="hero_btn_services">Conheça as Soluções</a>
             </div>
+        </div>
+        
+        <!-- Shape Divider -->
+        <div class="shape-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 120 1200 120z" class="shape-fill"></path>
+            </svg>
         </div>
     </section>
 
@@ -132,13 +159,13 @@
             </div>
             <div class="about-image slide-in-right carousel-container">
                 <div class="carousel-slide active">
-                    <img src="./1.jpeg" alt="Obra industrial 1">
+                    <img src="./1.webp" alt="Obra industrial 1">
                 </div>
                 <div class="carousel-slide">
-                    <img src="./2.jpeg" alt="Obra industrial 2">
+                    <img src="./2.webp" alt="Obra industrial 2">
                 </div>
                 <div class="carousel-slide">
-                    <img src="./3.jpeg" alt="Obra industrial 3">
+                    <img src="./3.webp" alt="Obra industrial 3">
                 </div>
                 
                 <button class="carousel-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
@@ -196,11 +223,76 @@
         </div>
     </section>
 
+    <!-- Social Proof / Testimonials Section (Template) -->
+    <section id="social-proof" class="social-proof-section section-padding" style="background-color: var(--color-light);">
+        <div class="container text-center">
+            <h2 data-i18n="sp_title" style="margin-bottom: 20px; font-size: 2.5rem; color: var(--color-darker);">Clientes que Confiam no Nosso Trabalho</h2>
+            <p data-i18n="sp_desc" style="color: var(--color-gray); margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto;">Veja o que nossos parceiros têm a dizer sobre a qualidade e pontualidade das nossas obras.</p>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card slide-in-up">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excelente trabalho! A equipe entregou o piso industrial do nosso novo galpão antes do prazo e com um acabamento impecável. Recomendamos fortemente."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                        <div class="author-info">
+                            <h4>Nome do Cliente 1</h4>
+                            <span>Diretor de Operações - Empresa X</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card slide-in-up delay-1">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Profissionalismo do começo ao fim. A recuperação do piso de resina na nossa fábrica evitou que paralisássemos a produção por muito tempo."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                        <div class="author-info">
+                            <h4>Nome do Cliente 2</h4>
+                            <span>Gerente de Manutenção - Indústria Y</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card slide-in-up delay-2">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"O tratamento de juntas realizado aumentou significativamente a vida útil do nosso pavimento, reduzindo desgastes nas empilhadeiras. Ótimo custo-benefício."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                        <div class="author-info">
+                            <h4>Nome do Cliente 3</h4>
+                            <span>Sócio Proprietário - Logística Z</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Logos Template -->
+            <div class="client-logos-container" style="margin-top: 80px;">
+                <h4 data-i18n="sp_clients_title" style="color: var(--color-gray); font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px;">Algumas Empresas Parceiras</h4>
+                <div class="client-logos-grid" style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; opacity: 0.5; color: var(--color-darker);">
+                    <i class="fas fa-industry fa-3x hover-color"></i>
+                    <i class="fas fa-building fa-3x hover-color"></i>
+                    <i class="fas fa-warehouse fa-3x hover-color"></i>
+                    <i class="fas fa-truck-loading fa-3x hover-color"></i>
+                    <i class="fas fa-hard-hat fa-3x hover-color"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Specialized Workforce Section -->
     <section id="workforce" class="about-section section-padding" style="background-color: var(--color-white);">
         <div class="container about-container">
             <div class="about-image slide-in-left">
-                <img src="./6.jpeg" alt="Mão de Obra Especializada" style="box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 8px; width: 100%; aspect-ratio: 1/1; object-fit: cover;">
+                <img src="./6.webp" alt="Mão de Obra Especializada" style="box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 8px; width: 100%; aspect-ratio: 1/1; object-fit: cover;">
             </div>
             <div class="about-text slide-in-right">
                 <span class="section-subtitle" data-i18n="hr_section_subtitle">Excelência e experiência para atender às necessidades da sua empresa</span>
@@ -214,8 +306,23 @@
         </div>
     </section>
 
-    <!-- Portfolio / CTA Section -->
-    <section id="portfolio" class="cta-section section-padding">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section section-padding">
+        <div class="container text-center">
+            <h2 data-i18n="port_title" style="margin-bottom: 40px; color: var(--color-darker); font-size: 2.5rem;">Obras Entregues com Excelência</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item"><img src="./1.webp" alt="Obra 1"></div>
+                <div class="portfolio-item"><img src="./2.webp" alt="Obra 2"></div>
+                <div class="portfolio-item"><img src="./3.webp" alt="Obra 3"></div>
+                <div class="portfolio-item"><img src="./4.webp" alt="Obra 4"></div>
+                <div class="portfolio-item"><img src="./5.webp" alt="Obra 5"></div>
+                <div class="portfolio-item"><img src="./6.webp" alt="Obra 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="cta-section section-padding">
         <div class="cta-overlay"></div>
         <div class="container cta-content text-center">
             <h2 data-i18n="cta_title">Pronto para elevar o nível da sua infraestrutura?</h2>
