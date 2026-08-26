@@ -139,19 +139,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Update form placeholders specifically
-        document.getElementById('input_name').placeholder = dict['form_name'] || "Seu Nome";
-        document.getElementById('input_phone').placeholder = dict['form_phone'] || "Seu Telefone";
-        document.getElementById('input_msg').placeholder = dict['form_msg'] || "Mensagem";
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (dict[key]) {
+                el.placeholder = dict[key];
+            }
+        });
+
+        // Update HTML lang attribute for SEO and Accessibility
+        document.documentElement.lang = lang;
     }
 
     // 5. About Image Carousel Logic
     let slideIndex = 0;
     const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.dot');
+    const carouselContainer = document.querySelector('.carousel-container');
     
     if(slides.length > 0) {
         showSlides(slideIndex);
         let slideInterval = setInterval(nextSlide, 4000);
+
+        // Pause on hover
+        if (carouselContainer) {
+            carouselContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+            carouselContainer.addEventListener('mouseleave', () => {
+                clearInterval(slideInterval); // Ensure no duplicate intervals
+                slideInterval = setInterval(nextSlide, 4000);
+            });
+        }
         
         document.querySelector('.carousel-prev')?.addEventListener('click', () => {
             clearInterval(slideInterval);
@@ -190,5 +206,16 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[slideIndex].classList.add('active');
             if(dots[slideIndex]) dots[slideIndex].classList.add('active');
         }
+    }
+
+    // 6. Form Submission Handler
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Implementação estática para simular envio
+            alert('Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.');
+            contactForm.reset();
+        });
     }
 });
